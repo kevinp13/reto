@@ -1,0 +1,9 @@
+<div  infiniteScroll [infiniteScrollDistance]="2"  (scrolled)="onScroll()">
+  <div class="container--pokemons" >
+    <div *ngFor="let pokemon of pokemons; let i= index">
+      {{pokemon.name}}
+      <img  [defaultImage]="'/assets/img/descarga.jpg'" [lazyLoad]="imageUrl+pokemon.id+'.png'" >
+    </div>
+  </div>
+
+</div>

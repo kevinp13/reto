@@ -1,0 +1,23 @@
+.container--pokemons{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    font-size: 20px;
+    width: 30%;
+    @media screen and (max-width: 800px) {
+      width: 47%;
+    }
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+}

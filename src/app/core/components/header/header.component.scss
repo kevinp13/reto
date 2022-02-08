@@ -1,0 +1,122 @@
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+.headerScrolled{
+  background-color: #232a34;
+}
+.dropdown-menu::before{
+  content: "";
+    position: absolute;
+    z-index: -1;
+    top: -4.95px;
+    right: auto;
+    left: 15px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 2px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: -3px -3px 5px rgb(82 95 127 / 4%);
+    left: auto;
+    right: 5px;
+    top: -4.5px;
+}
+.dropdown-toggle::after{
+  display: none;
+}
+.header--left{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+}
+.header--search{
+  flex-basis: 40%;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #05a081;
+  border-radius: 5px;
+}
+.logo>p{
+  font-family: 'Rowdies', cursive;
+  font-size: 25px;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  margin: 0;
+}
+.logo--text{
+  font-weight: 600;
+  color: white;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-basis: 40%;
+  gap:20px;
+}
+ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+ul>*{
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+ul>*:hover{
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+}
+nav>button{
+  background: #05a081;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: unset;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+ul>*.header--nav-desktop{
+  @media screen and (max-width:1000px) {
+    display: none;
+  }
+}
+.header--nav-tablet{
+  display: none;
+  @media screen and (min-width: 800px) {
+    display: flex;
+  }
+  @media screen and (max-width: 1000px) {
+    justify-content: flex-end;
+  }
+}
+.header--nav-mobile{
+  display: none;
+  @media screen and (max-width:800px) {
+    display: flex;
+    color: white;
+    font-size: 22px;
+    padding-right: 10px;
+  }
+}

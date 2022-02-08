@@ -1,0 +1,39 @@
+<header [ngClass]="{headerScrolled: headerScrolled}">
+  <section class="header--left">
+    <div class="logo">
+      <p >P</p>
+    </div>
+    <div class="logo--text">PexelsCopy</div>
+  </section>
+  <section *ngIf="headerScrolled" class="header--search">
+    <app-search></app-search>
+  </section>
+  <nav class="header--nav-tablet">
+    <ul class="header--nav-tablet">
+      <li class="header--nav-desktop">Explorar</li>
+      <li class="header--nav-desktop">Licencia</li>
+      <li class="header--nav-desktop">Subir</li>
+      <div class="" ngbDropdown aria-label="">
+        <fa-icon [icon]="faEllipsisH" ngbDropdownToggle></fa-icon>
+
+        <div class="" ngbDropdownMenu>
+          <button ngbDropdownItem>Iniciar sesion</button>
+          <button ngbDropdownItem>Únete</button>
+          <button ngbDropdownItem>Cambiar Idioma</button>
+          <button ngbDropdownItem>Api de imagen y video</button>
+          <button ngbDropdownItem>Aplicaciones y complementos</button>
+          <button ngbDropdownItem>Preguntas frecuentes</button>
+          <button ngbDropdownItem>Colaboradores</button>
+          <button ngbDropdownItem>impressum y condiciones</button>
+        </div>
+      </div>
+    </ul>
+    <button class="header--nav-tablet">Únete</button>
+  </nav>
+  <div class="header--nav-mobile">
+    <fa-icon [icon]="faBars"></fa-icon>
+  </div>
+</header>
+
+
+
