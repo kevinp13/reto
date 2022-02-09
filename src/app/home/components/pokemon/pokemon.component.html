@@ -1,0 +1,28 @@
+<div *ngIf="pokemon">
+  <h1>{{pokemon.name}}</h1>
+  <img [defaultImage]="'/assets/img/descarga.jpg'" [lazyLoad]="imagePrincipal">
+  <h2>Experiencia Base: {{pokemon.baseExperience}}</h2>
+  <div>
+    <h2>Habilidades</h2>
+    <p *ngFor="let ability of pokemon.abilities">
+      {{ability.ability.name}}
+    </p>
+  </div>
+  <h2>sprites</h2>
+  <div *ngFor="let spr of sprites">
+
+    <img  [defaultImage]="'/assets/img/descarga.jpg'" [lazyLoad]="spr" >
+  </div>
+  <h2>Estadisticas</h2>
+  <div *ngFor="let stat of pokemon.stats">
+    <h4>{{stat.stat.name}}:</h4> <p>{{stat.base_stat}}</p>
+  </div>
+</div>
+
+<!-- <div *ngFor="let spr of pokemon.sprites">
+  <pre>{{spr | json }}</pre>
+  <img  [defaultImage]="'/assets/img/descarga.jpg'" [lazyLoad]="spr" >
+</div> -->
+<!-- <pre>
+  {{pokemon | json}}
+</pre> -->

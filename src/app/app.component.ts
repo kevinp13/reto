@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { PokeapiService } from './shared/services/pokeapi.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reto';
+  pokemonsAll = [];
+  constructor(public pokeApi: PokeapiService) {}
+
+  ngOnInit(): void {
+  }
+
+
+
 }

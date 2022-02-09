@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { faBars, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
@@ -10,7 +10,6 @@ export class HeaderComponent implements OnInit {
   faEllipsisH = faEllipsisH;
   faBars = faBars;
   headerScrolled: boolean;
-  constructor() { }
 
   @HostListener('window:scroll', [])
   onScroll(): void {
@@ -21,6 +20,9 @@ export class HeaderComponent implements OnInit {
       this.headerScrolled = false;
     }
   }
+
+  constructor() { }
+
   ngOnInit(): void {
   }
 

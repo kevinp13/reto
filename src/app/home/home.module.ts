@@ -7,13 +7,15 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { InfiniteScrollComponent } from './components/infinite-scroll/infinite-scroll.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    InfiniteScrollComponent
+    InfiniteScrollComponent,
+    PokemonComponent
   ],
   imports: [
     CommonModule,

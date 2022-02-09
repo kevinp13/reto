@@ -1,12 +1,5 @@
 <div class="search form-control">
-  <!-- <input
-    #txtPokemonSearch
-    type="text"
-    name="pokemon-search"
-    id="pokemon-search"
-    placeholder="Busca Pokemons"
-    (keyup)="search(txtPokemonSearch.value)"
-  /> -->
+
   <input
     id="typeahead-focus"
     type="text"
@@ -14,20 +7,9 @@
     [ngbTypeahead]="search2"
     (focus)="focus$.next($any($event).target.value)"
     (click)="click$.next($any($event).target.value)"
-    (blur)="search($event)"
+    (keyup.enter)="search($event.target.value)"
     #instance="ngbTypeahead"
     placeholder="Busca Pokemons"
   />
-  <i class="fa fa-search" aria-hidden="true"></i>
+  <i class="fa fa-search cursor-pointer" (click)="search(model)" aria-hidden="true"></i>
 </div>
-<!--
-<input
-    id="typeahead-focus"
-    type="text"
-    class="form-control"
-    [(ngModel)]="model"
-    [ngbTypeahead]="search2"
-    (focus)="focus$.next($any($event).target.value)"
-    (click)="click$.next($any($event).target.value)"
-    #instance="ngbTypeahead"
-  /> -->

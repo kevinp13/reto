@@ -8,7 +8,7 @@ import { PokeapiService } from 'src/app/shared/services/pokeapi.service';
   styleUrls: ['./infinite-scroll.component.scss'],
 })
 export class InfiniteScrollComponent implements OnInit {
-
+  @Input() pokemonsAll;
   numbers = [];
   private finishPage = 5;
   private actualPage = 0;
@@ -16,12 +16,11 @@ export class InfiniteScrollComponent implements OnInit {
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 
   pokemons = [];
-  pokemonsAll = [];
 
-  constructor(private pokeApi: PokeapiService) {}
+  constructor() {}
 
   ngOnInit(): void {
-
+    this.get20pokemons();
   }
 
   getIdPokemons(pokemons: { name: string; url: string }[]) {
