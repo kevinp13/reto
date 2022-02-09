@@ -1,0 +1,41 @@
+.pokemonCard{
+  margin-top: 50px;
+}
+.pokemonCard>div{
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin: 0 auto;
+  h1,h2{
+    text-align: center;
+    font-weight: 700;
+  }
+}
+section{
+  display: flex;
+  max-width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+  @media screen and(max-width: 500px){
+    max-width: 90%;
+    margin: 20px auto;
+  }
+}
+.abilities{
+  margin-left: 40px;
+  display: list-item;
+}
+.stats{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+}
+.sprites{
+  display: flex;
+  justify-content: space-around;
+}
